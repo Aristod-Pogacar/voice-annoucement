@@ -15,7 +15,9 @@ import {
     ChevronDown,
 } from "lucide-react";
 
-const SOCKET_URL = "http://localhost:3000";
+// const SOCKET_URL = "http://localhost:3000";
+const SOCKET_URL = "https://voice-annoucement-backend.onrender.com/";
+// const SOCKET_URL = "https://voice-annoucement-backend.vercel.app/";
 
 function ReceptionPage() {
     const [connected, setConnected] = useState(false);
