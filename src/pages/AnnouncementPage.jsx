@@ -11,6 +11,10 @@ import api from "../api/api";
 import "../App.css";
 
 function AnnouncementPage() {
+    useEffect(() => {
+        document.title = "Voice Announcement";
+    }, []);
+
     const [search, setSearch] = useState("");
     const [employees, setEmployees] = useState([]);
     const [selectedEmployees, setSelectedEmployees] = useState([]);

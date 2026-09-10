@@ -20,6 +20,10 @@ const SOCKET_URL = "https://voice-annoucement-backend.onrender.com/";
 // const SOCKET_URL = "https://voice-annoucement-backend.vercel.app/";
 
 function ReceptionPage() {
+    useEffect(() => {
+        document.title = "Voice Announcement | Reception";
+    }, []);
+
     const [connected, setConnected] = useState(false);
     const [currentAnnouncement, setCurrentAnnouncement] =
         useState(null);
@@ -894,30 +898,27 @@ function ReceptionPage() {
       ============================================================ */}
 
             <main className="reception-content">
+
                 {!voiceEnabled && (
                     <section className="voice-disabled-panel">
 
                         <div className="voice-disabled-icon">
-                            <VolumeX size={32} />
+                            <VolumeX size={22} />
                         </div>
 
                         <div className="voice-disabled-content">
-                            <h2>
-                                Système vocal désactivé
-                            </h2>
-
-                            <p>
-                                Cliquez sur le bouton pour activer
-                                les annonces vocales automatiques.
-                            </p>
+                            <strong>Système vocal désactivé</strong>
+                            <span>
+                                Activez la voix pour recevoir les annonces automatiquement.
+                            </span>
                         </div>
 
                         <button
                             className="enable-voice-button"
                             onClick={enableVoice}
                         >
-                            <Volume2 size={20} />
-                            Activer le système vocal
+                            <Volume2 size={18} />
+                            <span>Activer la voix</span>
                         </button>
 
                     </section>
